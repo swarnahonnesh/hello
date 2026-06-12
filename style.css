@@ -1,0 +1,134 @@
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ffd6e7,#ffeef5);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    background:white;
+    padding:40px;
+    width:80%;
+    max-width:700px;
+    text-align:center;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    animation:fade 1s ease;
+}
+
+h1{
+    color:#ff4f8b;
+}
+
+p{
+    color:#555;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 30px;
+    background:#ff4f8b;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+textarea{
+    width:90%;
+    height:120px;
+    border-radius:15px;
+    padding:15px;
+    border:2px solid pink;
+}
+
+button{
+    padding:12px 30px;
+    margin:10px;
+    border:none;
+    border-radius:30px;
+    background:#ff4f8b;
+    color:white;
+    cursor:pointer;
+}
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.hearts span{
+    position:absolute;
+    color:pink;
+    font-size:25px;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+    
+}
+
+
+
+.choice-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.choice input{
+    display:none;
+}
+
+.choice span{
+    display:inline-block;
+    padding:15px 25px;
+    border-radius:30px;
+    background:#ffe6f0;
+    color:#ff4f8b;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    border:2px solid transparent;
+}
+
+.choice span:hover{
+    transform:scale(1.08);
+}
+
+.choice input:checked + span{
+    background:#ff4f8b;
+    color:white;
+    border:2px solid #ff2e73;
+    transform:scale(1.1);
+}
